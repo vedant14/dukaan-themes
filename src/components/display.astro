@@ -1,0 +1,41 @@
+---
+const showcases = [
+    {
+        name: "Hello",
+    },
+    {
+        name: "Hello",
+    },
+    {
+        name: "Hello",
+    },
+    {
+        name: "Hello",
+    },
+    {
+        name: "Hello",
+    },
+    {
+        name: "Hello",
+    },
+]
+---
+<div class="mt-24">
+    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+      Show-case
+    </h2>
+    <p class="text-lg mt-4 text-slate-600">
+      Astro comes batteries included. It takes the best parts of state-of-the-art
+      tools and adds its own innovations.
+    </p>
+</div>
+
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+    {showcases.map((item, i)=>(
+        <div class={`bg-gray-200 rounded ease-in duration-100 px-2 py-5 ${i % 2 === 0 ? 'rotate-2' : '-rotate-2'} hover:rotate-0`}>
+            {item.name}
+        </div>
+    ))}
+
+</div>
